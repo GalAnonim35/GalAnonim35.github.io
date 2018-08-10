@@ -4,6 +4,7 @@
 	margin-left:auto;
 	margin-right:auto;
 }
+
 #logo
 {
 background-color:black;
@@ -27,6 +28,7 @@ float: left;
 padding: 20px;
 width: 600px;
 min-height: 600px;
+background-color:gray;
 
 }
 
@@ -36,8 +38,8 @@ float: left;
 width: 160px;
 min-height: 620px;
 padding: 10px;
+background-color;white
 }
-
 #footer
 {
 clear: both;
