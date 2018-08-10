@@ -27,7 +27,7 @@ float: left;
 padding: 20px;
 width: 600px;
 min-height: 600px;
-background-color:green;
+
 }
 
 #ad
@@ -36,7 +36,6 @@ float: left;
 width: 160px;
 min-height: 620px;
 padding: 10px;
-background-color:grey;
 }
 
 #footer
