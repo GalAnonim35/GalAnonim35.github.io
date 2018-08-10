@@ -18,16 +18,15 @@ padding: 15px;
 float: left;
 width: 160px;
 min-height: 620px;
-padding: 10px;
+
 background-color: red;
 }
 
 #content
 {
 float: left;
-padding: 20px;
-width: 600px;
-min-height: 600px;
+width: 680px;
+min-height: 620px;
 background-color:gray;
 
 }
@@ -37,8 +36,7 @@ background-color:gray;
 float: left;
 width: 160px;
 min-height: 620px;
-padding: 10px;
-background-color;white
+background-color:green;
 }
 #footer
 {
