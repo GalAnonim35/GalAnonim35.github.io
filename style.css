@@ -1,17 +1,10 @@
-body{
-background-color:gray;
-font-family:Verdana;
-font-size: 20px;
-color:white;
-}
-
-container
+#container
 {
 	width:1000px;
 	margin-left:auto;
 	margin-right:auto;
 }
-logo
+#logo
 {
 background-color:black;
 color:white;
@@ -19,25 +12,25 @@ text-align:center;
 padding: 15px;
 }
 
-nav
+#nav
 {
 float: left;
-width: 120px;
+width: 160px;
 min-height: 620px;
 padding: 10px;
 background-color: red;
 }
 
-content
+#content
 {
 float: left;
 padding: 20px;
-width: 620px;
-min-height: 620px;
+width: 600px;
+min-height: 600px;
 background-color:green;
 }
 
-ad
+#ad
 {
 float: left;
 width: 160px;
@@ -46,7 +39,7 @@ padding: 10px;
 background-color:grey;
 }
 
-footer
+#footer
 {
 clear: both;
 background-color:black;
