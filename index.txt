@@ -5,16 +5,7 @@
         src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
 </script>
 
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
-        <title>Przyk³ad</title>  
-		<script src='https://maps.google.com/maps?file=api&amp;v=2.x&amp;sensor=false&amp;key=AIzaSyCvObSin3WBdm3NB_6fevaMOAacT0gdA4I' type='text/javascript'></script> 
-		<style type="text/css">
-		body,html
-		{
-			margin: 0;
-			padding: 0;
-		}
-		</style>
+        
 </head>
 
 
