@@ -138,13 +138,13 @@
 
 
 
-<!-- Tutaj zaczyna siê tre¶æ -->
+  <!-- Tutaj zaczyna siê tre¶æ -->
+
+
 
 <h2>Nag³ówek </h2>
 
 		<p>
-
-<img alt="Opis zdjêcia, a w nim wa¿ne dla nas s³owa kluczowe" src="images/zdjecie1.jpg" id="leftImg" />
 
 
 
@@ -154,11 +154,7 @@ eget dolor. Praesent risus felis, mattis at, ultrices in, laoreet ac, nunc.
 
 Pellentesque semper tempus pede. In hac habitasse platea dictumst. Integer
 
-ipsum tortor, tempus ut, vehicula ac, consequat id, nisl.
-
-<br/>
-
- Aliquam sit amet nunc
+ipsum tortor, tempus ut, vehicula ac, consequat id, nisl. Aliquam sit amet nunc
 
 ut tellus faucibus sodales. Nulla sed nisi. Fusce consectetuer dignissim leo.
 
@@ -172,39 +168,109 @@ Aliquam erat volutpat. Curabitur sed nisl.  </p>
 
 
 
-<p></p>
+<h2>Nag³ówek 2</h2>
 
 
 
+ <p>Je¿eli maj± Pañstwo jakiekolwiek pytania z chêci± odpowiemy na nie. Prosimy o kontakt drog± telefoniczn± lub mailow±. Mamy nadziejê, ¿e nasze us³ugi spe³ni± Pañstwa oczekiwania. </p>
+
+		  
+
+		
+
+<?php
+
+// sprawdzamy, czy zmienna $submit jest pusta
+
+if (empty($_POST['submit'])) {
+
+    // wy¶wietlamy formularz
+
+    echo "<table border=\"0\"><form method=\"post\">
+
+<tr>
+
+<td>Temat wiadomo¶ci</td>
+
+<td><input type=\"text\" name=\"temat\" style=\"width: 250px\"></td>
+
+</tr>
+
+<tr>
+
+<td>Tre¶æ wiadomo¶ci</td>
+
+<td><textarea name=\"tresc\" style=\"width: 250px; height: 100px\"></textarea></td>
+
+</tr>
+
+<tr>
+
+<td>Imiê, nazwisko lub nick</td>
+
+<td><input type=\"text\" name=\"imie\" style=\"width: 250px\"></td>
+
+</tr>
+
+<tr>
+
+<td>Adres e-mail</td>
+
+<td><input type=\"text\" name=\"email\" style=\"width: 250px\"></td>
+
+</tr>
+
+<tr>
+
+<td>&nbsp;</td>
+
+<td><input type=\"submit\" name=\"submit\" value=\"Wy¶lij\">&nbsp;
 
 
-<p>
 
-Maecenas posuere, ipsum at facilisis feugiat, mi orci accumsan sem, eget
+</tr>
 
-fermentum felis massa et pede. Proin vitae nisl id purus congue dictum. Nulla
+</table>";
 
-metus quam, nonummy sed, pretium vitae, vestibulum a, ligula. Praesent
+}
 
-consectetuer. Nunc non odio. Aenean nec mi. Aliquam erat volutpat. Nullam
+// sprawdzamy, czy zmienne przes³ane z formularza nie s± puste
 
-elementum risus nonummy ipsum. Morbi erat mauris, tincidunt sed, ultricies nec,
+elseif (!empty($_POST['temat']) && !empty($_POST['tresc']) && !empty($_POST['imie']) && !empty($_POST['email'])) {
 
-gravida ut, arcu. Etiam est. Nullam lacinia, felis vitae vulputate bibendum,
+    // je¿eli powy¿szy warunek jest spe³niony tworzona jest wiadomo¶æ
 
-eros ipsum volutpat quam, et luctus felis turpis sit amet velit. Quisque porta,
+    // zmienna $message zawiera tre¶æ wiadomo¶ci
 
-mauris et vestibulum sollicitudin, neque ante sollicitudin mi, eget convallis
+    $message = "Temat wiadomo¶ci:\n$_POST[temat]\nTre¶æ wiadomo¶ci:\n$_POST[tresc]\nWys³a³,: $_POST[imie]\ne-mail: $_POST[email]";
 
-justo purus et est.  </p>
+    // zmienna $header zawiera przede wszystkim adres zwrotny
+
+    $header = "From: $_POST[imie] <$_POST[email]>";
+
+    // funkcja mail() za pomoc± której wiadomo¶æ zostanie wys³ana
+
+    @mail("mail@twoja-domena.pl","Wiadomosc ze strony WWW","$message","$header")
+
+    or die('Nie uda³o siê wys³aæ wiadomo¶ci');
+
+    // wy¶wietlenie komunikatu w przypadku powodzenia 
+
+    echo "<div align=\"center\"><strong>Wiadomo¶æ zosta³a wys³ana poprawnie! Postaramy siê jak najszybciej dostarczyæ odpowied¼ na Pañstwa zapytanie. </strong></div>";
+
+}
+
+// lub w przypadku nie wype³nienia formularza do koñca
+
+else echo "<span style=\"color: #FF0000; text-align: center;\">Wype³nij wszystkie pola formularza!</span>";
 
 
 
-		 <!-- Tutaj koñczy siê tre¶æ -->
+?> 
 
+	<!-- Tutaj koñczy siê tre¶æ -->
 
-
-
+		</div>
 
 
 
@@ -265,4 +331,3 @@ justo purus et est.  </p>
 </body>
 
 </html>
-
